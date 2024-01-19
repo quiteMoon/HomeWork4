@@ -1,0 +1,84 @@
+@keyframes myAnim {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes secStr {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    background-color: aqua;
+    color: blue;
+    padding: 15px 25px;
+    transition: all 0.8s ease-in-out 0s;
+}
+a:hover{
+    background-color: blue;
+    color: aqua;
+    transform:skew(20deg) translate(20px, 20px) rotate(20deg) scale(1.2, 1.2);
+    animation: myAnim 2s ease-out 0s infinite;
+}
+.inner-container{
+    width: 250px;
+    height: 250px;
+    background-image: url(image/559ad214c43581f9ee6c8e3d9a001793.png);
+    background-size: contain;
+    position: relative;
+    border-radius: 50%;
+}
+.seconds-st
+{
+    width: 2px;
+    height: 30%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    position:absolute;
+    top:20%;
+    left:47%;
+    transform-origin: 50% 100%;
+    animation: secStr 60s linear infinite;
+}
+
+.minute-st
+{
+    width: 2px;
+    height: 25%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    position:absolute;
+    top:25%;
+    left: 47%;
+    transform-origin: 50% 100%;
+    animation: secStr 3600s linear infinite;
+}
+
+.hour-st
+{
+    width: 2px;
+    height: 15%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    position:absolute;
+    top:35%;
+    left: 47%;
+    transform-origin: 50% 100%;
+    animation: secStr 43200s linear infinite;
+}
+

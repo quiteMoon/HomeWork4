@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.box {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    background-color:lightblue;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover::before {
+    opacity: 1;
+}
+
+.box:hover {
+    transform: scale(1.2)
+}
+
+.box p {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+
